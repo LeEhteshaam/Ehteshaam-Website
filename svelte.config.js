@@ -4,7 +4,6 @@ import adapter from '@sveltejs/adapter-auto';
 
 const mdsvexOptions = {
   extensions: ['.md'],
-  // No layout specified, just use default rendering
   remarkPlugins: [],
   rehypePlugins: [],
 };
@@ -16,7 +15,10 @@ export default {
     mdsvex(mdsvexOptions)
   ],
   kit: {
-    adapter: adapter()
+    adapter: adapter(),
+    paths: {
+      base: '/repositoryname',  // Replace 'repositoryname' with your actual repository name
+    },
   },
   server: {
     hmr: {
