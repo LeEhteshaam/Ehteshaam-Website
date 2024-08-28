@@ -17,7 +17,7 @@ export default {
   kit: {
     adapter: adapter(),
     paths: {
-      base: '/repositoryname',  // Replace 'repositoryname' with your actual repository name
+      base: '/Ehteshaam-Website',  
     },
   },
   server: {
