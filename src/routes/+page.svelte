@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount, afterUpdate } from 'svelte';
+  import { onMount } from 'svelte';
   import '@fortawesome/fontawesome-free/css/all.min.css';
   import { goto } from '$app/navigation';
 
@@ -18,8 +18,14 @@
       }
     });
 
-    // Trigger animation when component has mounted
-    loaded = true;
+    // Hide elements initially and then show them after a delay
+    const fadeInElements = document.querySelectorAll('.fadeInElement');
+    fadeInElements.forEach(el => el.classList.add('hidden'));
+
+    setTimeout(() => {
+      fadeInElements.forEach(el => el.classList.remove('hidden'));
+      loaded = true;
+    }, 100); // Adjust the delay time if necessary
   });
 
   function goToBlog() {
@@ -43,7 +49,6 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
 }
 
 .header {
@@ -52,7 +57,6 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
 .nameIntroduction, .frame {
@@ -60,7 +64,6 @@
   padding: 20px;
   box-sizing: border-box;
   width: 50%; 
- 
 }
 
 .nameIntroduction {
@@ -121,20 +124,25 @@
   will-change: transform, opacity;
 }
 
-.loaded .fadeInElement {
-    animation: fadeInContent 0.75s ease forwards;
-  }
+.hidden {
+  visibility: hidden;
+}
 
-  @keyframes fadeInContent {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.loaded .fadeInElement {
+  visibility: visible;
+  animation: fadeInContent 0.75s ease forwards;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @media screen and (max-width: 768px) {
   .header {
@@ -162,8 +170,9 @@
 </style>
 
 <div class="page">
-  <div class="header {loaded ? 'loaded fadeInElement' : ''}"> <!-- Updated here -->
-    <div class="nameIntroduction fadeInElement"> <!-- Apply animation class -->
+  <title>Ehteshaam's website</title>
+  <div class="header {loaded ? 'loaded' : ''}">
+    <div class="nameIntroduction fadeInElement hidden">
       <h1 id="Name">Ehteshaam Fareed Paracha</h1>
       <hr>
       <div class="aboutMe">
@@ -176,7 +185,7 @@
         <i id="linkedin" class="fa-brands fa-linkedin fa-2x"></i>
       </div>
     </div>
-    <div class="frame fadeInElement"> <!-- Apply animation class -->
+    <div class="frame fadeInElement hidden">
       <img src="/src/lib/images/Ehteshaam.jpg" alt="Ehteshaam" />
     </div>
   </div>

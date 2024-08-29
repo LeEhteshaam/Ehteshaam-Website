@@ -161,6 +161,7 @@
 </style>
 
 <div class="home" on:click={goToHome}>Home</div>
+<title>Ehteshaam's Blog</title>
 <div class="page">
     <div class="header">
         <h1 id="title">Ehteshaam's Blog</h1>
