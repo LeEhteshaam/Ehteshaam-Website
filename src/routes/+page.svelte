@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import '@fortawesome/fontawesome-free/css/all.min.css';
   import { goto } from '$app/navigation';
+  import img from '../lib/images/Ehteshaam.jpg';
 
   let loaded = false;
 
@@ -186,7 +187,7 @@
       </div>
     </div>
     <div class="frame fadeInElement hidden">
-      <img src="/src/lib/images/Ehteshaam.jpg" alt="Ehteshaam" />
+      <img src={img} alt="Ehteshaam" />
     </div>
   </div>
 </div>

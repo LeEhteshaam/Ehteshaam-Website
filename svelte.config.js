@@ -16,14 +16,6 @@ export default {
   ],
   kit: {
     adapter: adapter(),
-    // Optional: Add paths, prerender options, etc., if needed
+    // No need to explicitly define the entry point
   },
-  vitePlugin: {
-    // Enable HMR overlay if needed
-    experimental: {
-      inspector: {
-        overlay: false,
-      },
-    },
-  }
 };
