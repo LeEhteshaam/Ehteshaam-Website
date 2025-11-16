@@ -10,7 +10,7 @@
     const elements = {
       'github': 'https://github.com/LeEhteshaam',
       'linkedin': 'https://www.linkedin.com/in/ehteshaam-paracha-66a5572b6/',
-      'resume': 'https://drive.google.com/file/d/1bgN-gp5cPRijx9skf52S6hFrXPpLIE4C/view?usp=sharing'
+      'resume': 'https://drive.google.com/file/d/1pr0R_ME_56tSD2PTLC5uh_Kw8dp-zOJ9/view?usp=sharing'
     };
     Object.entries(elements).forEach(([id, url]) => {
       const element = document.getElementById(id);
@@ -177,8 +177,8 @@
       <h1 id="Name">Ehteshaam Fareed Paracha</h1>
       <hr>
       <div class="aboutMe">
-        I am a Grade 12 student based in Ontario. I like all things Sports, Video Games, and Computers; I also enjoy working out occasionally. Keep track of my blog to see my new projects, my reviews of television shows, films or video games and just news that either excites or slightly freights me. As I aspire to follow a career in Mathematics and Computer Science, I hope that I can shake the world within my pursuit of passion.
-      </div>
+        My name is Ehteshaam, and I'm a first-year student in the Waterloo Computer Science and Business Administration (CS/BBA) Dual Degree program. I like playing sports, working out and solving interesting problems. Feel free to hit me up!
+    </div>
       <div class="importantInfo">
         <div id="blog" on:click={goToBlog}>Blog</div>
         <div id="resume">Resume</div>
