@@ -41,9 +41,9 @@
 			<h1 id="Name">Ehteshaam Fareed Paracha</h1>
 			<hr />
 			<div class="aboutMe">
-				My name is Ehteshaam, and I’m a first-year CS/BBA Dual Degree student at the University of
-				Waterloo. I currently work as a Software Engineer for Waterloo Blockchain Club and am an
-				incoming Engineering Intern @ Cybrid.
+				My name is Ehteshaam, and I’m a second-year Computer Science student at the University of
+				Waterloo. I currently work as a Software Engineer at Waterloo Blockchain Club and am a
+				Engineering Intern @ Cybrid.
 			</div>
 			<div class="importantInfo">
 				<div id="blog" on:click={goToBlog}>Blog</div>
